@@ -13,20 +13,9 @@ object-detection-gender-classification/
 ├── model/
 │   ├── gender_model.h5
 │   ├── train_gender_model.py
-├── app/
-│   ├── __init__.py
-│   ├── routes.py
-│   ├── camera.py
-├── static/
-│   ├── css/
-│   ├── js/
-├── templates/
-│   ├── index.html
 ├── README.md
 ├── requirements.txt
 ├── main.py
-├── run.sh
-└── Dockerfile
 ```
 
 ## Features
@@ -34,14 +23,12 @@ object-detection-gender-classification/
 - Real-time object detection using YOLOv3
 - Gender classification using a pre-trained TensorFlow model
 - Live webcam feed for detection
-- Optional Flask web interface for easy use via a browser
 
 ## Prerequisites
 
 - Python 3.6 or later
 - TensorFlow 2.x
 - OpenCV
-- Flask (optional for web interface)
 
 ## Setup and Installation
 
@@ -84,16 +71,6 @@ python main.py
 
 This will open your webcam and display the live video feed with detections.
 
-### Option 2: Run with Flask Web Interface
-
-Run the Flask application to use the web interface:
-
-```bash
-python app/routes.py
-```
-
-Open your browser and visit `http://127.0.0.1:5000` to see the live stream with object detection and gender classification.
-
 ## Project Explanation
 
 1. **YOLOv3 for Object Detection:**
@@ -111,9 +88,5 @@ Open your browser and visit `http://127.0.0.1:5000` to see the live stream with 
 
 - **`yolov3/`:** Contains YOLOv3 configuration files and weights.
 - **`model/`:** Holds the gender classification model and optional training script.
-- **`app/`:** Includes Flask application code for the web interface.
-- **`templates/`:** HTML templates for the Flask web interface.
 - **`main.py`:** The main script to run object detection and classification.
 - **`requirements.txt`:** List of required Python packages.
-- **`run.sh`:** Shell script to automate the running of the application (optional).
-- **`Dockerfile`:** Docker configuration to containerize the project (optional).
